@@ -532,8 +532,6 @@ function coordinates(rect::Rect{1, T}) where {T}
     return [Point{1,T}(o[1]), Point{1,T}(o[1]+w[1])]
 end
 
-texturecoordinates(rect::Rect{1}) = [Point{1,Int}(0), Point{1,Int}(1)]
-
 ##
 # Rect2 decomposition
 
