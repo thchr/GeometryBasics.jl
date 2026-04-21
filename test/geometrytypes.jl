@@ -672,12 +672,12 @@ end
     r = Rect{1,Float32}(0.2, 0.5)
     @test eltype(coordinates(r)) == Point{1,Float32}
     @test coordinates(r) == [Point{1,Float32}(0.2), Point{1,Float32}(0.7)]
-    @test texturecoordinates(r) == [Point{1,Int}(1), Point{1,Int}(1)]
+    @test texturecoordinates(r) == [Point{1,Int}(0), Point{1,Int}(1)]
 
     r64 = Rect{1,Float64}(-0.2, 1.3)
     @test eltype(coordinates(r64)) == Point{1,Float64}
     @test coordinates(r64) == [Point{1,Float64}(-0.2), Point{1,Float64}(1.1)]
-    @test texturecoordinates(r64) == [Point{1,Int}(1), Point{1,Int}(1)]
+    @test texturecoordinates(r64) == [Point{1,Int}(0), Point{1,Int}(1)]
 end
 
 @testset "LineStrings" begin
